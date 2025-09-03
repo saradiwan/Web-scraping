@@ -246,7 +246,18 @@ DEFAULT_LANDUSE_SCORES = {
 # ------------------------------
 # Streamlit UI
 # ------------------------------
-st.set_page_config(page_title="Real‑Time AHP Site Suitability", layout="wide")
+st.set_page_config(
+    page_title="Real-Time AHP Site Suitability",
+    page_icon="🌍",
+    layout="wide",
+    initial_sidebar_state="expanded",
+    menu_items={
+        'Get Help': None,
+        'Report a bug': None,
+        'About': "🌍 Real-Time AHP Site Suitability\nBuilt with Python + Streamlit"
+    }
+)
+
 st.title("🌍 Real‑Time AHP Site Suitability")
 st.caption("Enter a location, fetch live layers (Solar, Slope, OSM proximity), adjust AHP weights, and see suitability in real time.")
 
